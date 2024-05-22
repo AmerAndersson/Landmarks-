@@ -30,6 +30,4 @@ struct MapView: View {
 #Preview {
     /// Update the preview to pass a fixed coordinate.
     MapView(coordinate: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868))
-
-
 }

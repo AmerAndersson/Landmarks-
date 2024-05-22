@@ -49,6 +49,6 @@ struct TextOverlay: View {
 }
 #Preview {
     FeatureCard(landmark: ModelData().features[0])
-        .aspectRatio(3 / 2 ,contentMode: .fit)
+        .aspectRatio(3 / 2, contentMode: .fit)
 
 }

@@ -20,7 +20,7 @@ struct ProfileEditor: View {
     }
 
     var body: some View {
-        List{
+        List {
             HStack {
                 Text("Username")
                 Spacer()
@@ -28,12 +28,12 @@ struct ProfileEditor: View {
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.trailing)
             }
-            Toggle(isOn: $profile.prefersNotifications){
+            Toggle(isOn: $profile.prefersNotifications) {
                 Text("Enable Notifications")
             }
 
             Picker("Seasonal Photo", selection: $profile.seasonalPhoto) {
-                ForEach(Profile.Season.allCases){ section in
+                ForEach(Profile.Season.allCases) { section in
                     Text(section.rawValue).tag(section)
 
                 }

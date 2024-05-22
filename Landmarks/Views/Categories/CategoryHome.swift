@@ -13,7 +13,6 @@ struct CategoryHome: View {
     /// as well as to other landmark data later.
     @Environment(ModelData.self) var modelData
     @State private var showingProfile = false
-    
     var body: some View {
         /// Host the different categories,
         /// and display the categories in Landmarks
@@ -23,8 +22,6 @@ struct CategoryHome: View {
                 /// new page view.
                 PageView(pages: modelData.features.map { FeatureCard(landmark: $0) })
                     .listRowInsets(EdgeInsets())
-                
-                
                 ForEach(modelData.categories.keys.sorted(), id: \.self) { key in
                     CategoryRow(categoryName: key, items: modelData.categories[key]!)
                 }

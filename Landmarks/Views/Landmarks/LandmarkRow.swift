@@ -39,7 +39,6 @@ struct LandmarkRow: View {
 #Preview {
     /// work with the ModelData object
     let landmarks = ModelData().landmarks
-    
     /// Customize the row preview in group
     /// together in a single collection view.
     return Group {
@@ -48,4 +47,3 @@ struct LandmarkRow: View {
         LandmarkRow(landmark: landmarks[1])
     }
 }
-

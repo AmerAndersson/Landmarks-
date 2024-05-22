@@ -17,7 +17,6 @@ struct Hike: Codable, Hashable, Identifiable {
     var difficulty: Int
     var observations: [Observation]
 
-
     static var formatter = LengthFormatter()
 
     var distanceText: String {

@@ -23,7 +23,6 @@ struct ProfileSummary: View {
                 Text("Seasonal Photos: \(profile.seasonalPhoto.rawValue)")
                 Text("Goal Date: ") + Text(profile.goalDate, style: .date)
 
-
                 Divider()
 
                 /// Badges with varying hues
@@ -31,7 +30,6 @@ struct ProfileSummary: View {
                 VStack(alignment: .leading) {
                     Text("Completed Badges")
                         .font(.headline)
-
 
                     ScrollView(.horizontal) {
                         HStack {
@@ -47,11 +45,9 @@ struct ProfileSummary: View {
                 }
                 Divider()
 
-
                 VStack(alignment: .leading) {
                     Text("Recent Hikes")
                         .font(.headline)
-
                     HikeView(hike: modelData.hikes[0])
                 }
             }

@@ -17,8 +17,7 @@ class ModelData {
     /// An instance of the user profile
     var profile = Profile.default
 
-
-    /// Computed features array, which contains only 
+    /// Computed features array, which contains only
     /// the landmarks that have isFeatured set to true.
     var features: [Landmark] {
         landmarks.filter {$0.isFeatured}
@@ -33,8 +32,6 @@ class ModelData {
         )
     }
 }
-
-
 
 /// load(_:) method that fetches JSON data with a given name from the app’s main bundle.
 /// The load method relies on the return type’s conformance to the Decodable protocol,

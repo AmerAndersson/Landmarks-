@@ -7,7 +7,6 @@
 import SwiftUI
 import UIKit
 
-
 /// Pass a binding to this property down to the PageViewController view.
 /// The PageViewController updates the binding to match the visible page.
 struct PageViewController<Page: View>: UIViewControllerRepresentable {
@@ -35,7 +34,6 @@ struct PageViewController<Page: View>: UIViewControllerRepresentable {
         /// in addition to the data source. With the binding connected in both directions,
         /// the text view updates to show the correct page number after each swipe.
 
-
         return pageViewController
     }
 
@@ -58,7 +56,6 @@ struct PageViewController<Page: View>: UIViewControllerRepresentable {
         var parent: PageViewController
         var controllers = [UIViewController]()
 
-
         init(_ pageViewController: PageViewController) {
             parent = pageViewController
             controllers = parent.pages.map { UIHostingController(rootView: $0) }
@@ -68,8 +65,7 @@ struct PageViewController<Page: View>: UIViewControllerRepresentable {
         /// so that it can swipe back and forth between them.
         func pageViewController(
             _ pageViewController: UIPageViewController,
-            viewControllerBefore viewController: UIViewController) -> UIViewController?
-        {
+            viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let index = controllers.firstIndex(of: viewController) else {
             return nil
         }
@@ -83,8 +79,7 @@ struct PageViewController<Page: View>: UIViewControllerRepresentable {
         /// so that it can swipe back and forth between them.
         func pageViewController(
             _ pageViewController: UIPageViewController,
-            viewControllerAfter viewController: UIViewController) -> UIViewController?
-        {
+            viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let index = controllers.firstIndex(of: viewController) else {
             return nil
         }
@@ -93,7 +88,6 @@ struct PageViewController<Page: View>: UIViewControllerRepresentable {
         }
         return controllers[index + 1]
         }
-        
         /// Because SwiftUI calls this method whenever a page
         /// switching animation completes, you can find the index
         /// of the current view controller and update the binding.

@@ -11,7 +11,6 @@ import SwiftUI
 struct CategoryItem: View {
     var landmark: Landmark
 
-
     var body: some View {
         VStack(alignment: .leading) {
             landmark.image
@@ -26,7 +25,6 @@ struct CategoryItem: View {
         .padding(.leading, 15)
     }
 }
-
 
 #Preview {
     CategoryItem(landmark: ModelData().landmarks[0])

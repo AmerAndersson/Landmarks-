@@ -19,7 +19,6 @@ struct LandmarkDetail: View {
         modelData.landmarks.firstIndex(where: { $0.id == landmark.id })!
     }
 
-
     var body: some View {
         /// A binding controls the storage for a value
         @Bindable var modelData = modelData
@@ -47,7 +46,6 @@ struct LandmarkDetail: View {
                     /// isSet: $modelData.landmarks[landmarkIndex].isFavorite
                     FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
                 }
-
 
                 HStack {
                     Text(landmark.park)

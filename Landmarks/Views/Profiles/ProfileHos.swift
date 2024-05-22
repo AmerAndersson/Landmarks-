@@ -19,7 +19,6 @@ struct ProfileHost: View {
 
     @State private var draftProfile = Profile.default
 
-
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             /// Toggles the environment’s editMode value on and off.
@@ -36,7 +35,7 @@ struct ProfileHost: View {
 
             }
             /// The edit profile view displays when user tap Edit
-            if editMode?.wrappedValue == .inactive{
+            if editMode?.wrappedValue == .inactive {
                 ProfileSummary(profile: modelData.profile)
             } else {
                 ProfileEditor(profile: $draftProfile)
@@ -51,7 +50,6 @@ struct ProfileHost: View {
         .padding()
     }
 }
-
 
 #Preview {
     /// The model data

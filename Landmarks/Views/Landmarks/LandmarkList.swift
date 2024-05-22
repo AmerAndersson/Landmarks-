@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct LandmarkList: View {
     /// read the model data of the current view
     @Environment(ModelData.self) var modelData
@@ -54,7 +53,6 @@ struct LandmarkList: View {
         }
     }
 }
-
 
 #Preview {
     /// passes the data object down through the environment

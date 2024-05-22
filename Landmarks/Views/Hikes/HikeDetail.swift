@@ -5,7 +5,6 @@
 //  Created by Amer Andersson on 2024-05-10.
 //
 
-
 import SwiftUI
 
 struct HikeDetail: View {

@@ -26,7 +26,6 @@ struct BadgeBackground: View {
                 let xOffset = (width * (1.0 - xScale)) / 2.0
                 width *= xScale
 
-
                 /// moves the drawing cursor within
                 /// the bounds of a shape as though
                 /// an imaginary pen or pencil is hovering

@@ -11,7 +11,6 @@ struct CircleImage: View {
     /// Pass data into child views a stored image
     var image: Image
 
-
     var body: some View {
         /// The image of Turtle Rock
         image
@@ -22,7 +21,6 @@ struct CircleImage: View {
             .shadow(radius: 7)
     }
 }
-
 
 #Preview {
     /// The image of Turtle Rock

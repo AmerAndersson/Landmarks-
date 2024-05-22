@@ -25,13 +25,13 @@ struct HikeGraph: View {
 
     var color: Color {
         switch path {
-            case \.elevation:
+        case \.elevation:
                 return .gray
-            case \.heartRate:
+        case \.heartRate:
                 return Color(hue: 0, saturation: 0.5, brightness: 0.7)
-            case \.pace:
+        case \.pace:
                 return Color(hue: 0.7, saturation: 0.4, brightness: 0.7)
-            default:
+        default:
                 return .black
         }
     }

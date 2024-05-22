@@ -25,4 +25,3 @@ struct Profile {
         var id: String { rawValue }
     }
 }
-

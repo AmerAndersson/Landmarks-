@@ -27,7 +27,6 @@ struct ContentView: View {
                 }
                 .tag(Tab.featured)
 
-
             LandmarkList()
                 .tabItem {
                     Label("List", systemImage: "list.bullet")
@@ -36,7 +35,7 @@ struct ContentView: View {
         }
     }
 }
-// MARK: - Passes the data object 
+/// Passes the data object 
 /// Down through the environment
 #Preview {
     ContentView()

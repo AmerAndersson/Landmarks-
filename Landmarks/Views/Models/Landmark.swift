@@ -19,7 +19,6 @@ struct Landmark: Hashable, Codable, Identifiable {
     var isFavorite: Bool
     var isFeatured: Bool
 
-
     /// The category view displays all categories
     /// in separate rows arranged in a vertical column
     var category: Category
@@ -60,10 +59,7 @@ struct Landmark: Hashable, Codable, Identifiable {
     /// Compute a locationCoordinate property
     /// that’s useful for interacting with the MapKit framework.
     var locationCoordinate: CLLocationCoordinate2D {
-        CLLocationCoordinate2D (
-            latitude: coordinates.latitude,
-            longitude: coordinates.longitude
-        )
+        CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
     }
 
     /// Manage information about the landmark’s location.
