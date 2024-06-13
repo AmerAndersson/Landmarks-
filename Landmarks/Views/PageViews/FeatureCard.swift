@@ -31,10 +31,10 @@ struct TextOverlay: View {
             startPoint: .bottom,
             endPoint: .center)
     }
+
     var body: some View {
         ZStack(alignment: .bottomLeading) {
             gradient
-
             VStack(alignment: .leading) {
                 Text(landmark.name)
                     .font(.title)

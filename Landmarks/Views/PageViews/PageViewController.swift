@@ -65,28 +65,30 @@ struct PageViewController<Page: View>: UIViewControllerRepresentable {
         /// so that it can swipe back and forth between them.
         func pageViewController(
             _ pageViewController: UIPageViewController,
-            viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let index = controllers.firstIndex(of: viewController) else {
-            return nil
-        }
-        if index == 0 {
+            viewControllerBefore viewController: UIViewController) -> UIViewController? 
+        {
+            guard let index = controllers.firstIndex(of: viewController) else {
+                return nil
+            }
+            if index == 0 {
             return controllers.last
-        }
-        return controllers[index - 1]
-        }
+            }
+            return controllers[index - 1]
+       }
 
         /// The methods establish the relationships between view controllers,
         /// so that it can swipe back and forth between them.
         func pageViewController(
             _ pageViewController: UIPageViewController,
-            viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let index = controllers.firstIndex(of: viewController) else {
-            return nil
-        }
-        if index + 1 == controllers.count {
-            return controllers.first
-        }
-        return controllers[index + 1]
+            viewControllerAfter viewController: UIViewController) -> UIViewController? 
+        {
+            guard let index = controllers.firstIndex(of: viewController) else {
+                return nil
+            }
+            if index + 1 == controllers.count {
+                return controllers.first
+            }
+            return controllers[index + 1]
         }
         /// Because SwiftUI calls this method whenever a page
         /// switching animation completes, you can find the index
@@ -96,10 +98,10 @@ struct PageViewController<Page: View>: UIViewControllerRepresentable {
             didFinishAnimating finished: Bool,
             previousViewControllers: [UIViewController],
             transitionCompleted completed: Bool) {
-                if completed,
-                   let visibleViewController = pageViewController.viewControllers?.first,
-                   let index = controllers.firstIndex(of: visibleViewController) {
-                    parent.currentPage = index
+            if completed,
+                let visibleViewController = pageViewController.viewControllers?.first,
+                let index = controllers.firstIndex(of: visibleViewController) {
+                parent.currentPage = index
            }
         }
     }
